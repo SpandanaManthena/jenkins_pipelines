@@ -14,7 +14,7 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: env.GIT_CREDENTIALS_ID, 
                                                      usernameVariable: 'GIT_USERNAME', 
                                                      passwordVariable: 'GIT_PASSWORD')]) {
-                        sh 'git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/SpandanaManthena/jenkins_shared_library.git'
+                        sh 'git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/SpandanaManthena/task-management-system.git'
                     }
                 }
             }
