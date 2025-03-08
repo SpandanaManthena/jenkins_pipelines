@@ -15,6 +15,7 @@ pipeline {
                                                      usernameVariable: 'GIT_USERNAME', 
                                                      passwordVariable: 'GIT_PASSWORD')]) {
                         sh 'git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/SpandanaManthena/task-management-system.git'
+                        sh 'git checkout develop'
                     }
                 }
             }
