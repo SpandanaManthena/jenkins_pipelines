@@ -20,8 +20,7 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: env.GIT_CREDENTIALS_ID, 
                                                      usernameVariable: 'GIT_USERNAME', 
                                                      passwordVariable: 'GIT_PASSWORD')]) {
-                        sh 'git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/SpandanaManthena/task-management-system.git'
-                        sh 'git checkout develop'
+                        sh 'git clone -b develop https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/SpandanaManthena/task-management-system.git'
                     }
                 }
             }
