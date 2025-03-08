@@ -8,6 +8,12 @@ pipeline {
     }
 
     stages {
+        stage('Cleanup') {
+            steps {
+                cleanWs()  // This will delete everything in the workspace before running the pipeline
+            }
+        }
+        
         stage('Checkout Code') {
             steps {
                 script {
